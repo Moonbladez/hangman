@@ -1,28 +1,3 @@
-.Hangman {
-  display: flex;
-  flex-direction: column;
-  max-width: 90%;
-}
-
-.Hangman-image {
-  align-self: center;
-}
-
-
-.Hangman-word {
-  letter-spacing: 1em;
-  margin: 0.4em -1em 0.2em 0;
-  font-size: 2rem;
-}
-
-.Hangman-btns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  justify-content: center;
-}
-
-
 .Hangman button:disabled {
   background: #bdbdbd;
   color: #eeeeee;

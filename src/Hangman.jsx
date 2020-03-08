@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { randomWord } from "./words";
 import "./Hangman.css";
+import styled from "styled-components";
 import img0 from "./0.jpg";
 import img1 from "./1.jpg";
 import img2 from "./2.jpg";
@@ -87,7 +88,7 @@ class Hangman extends Component {
 		if (gameOver) gameState = "You loose";
 
 		return (
-			<div className='Hangman'>
+			<HangmanWrapper>
 				<h1> Hangman </h1>
 				<img
 					src={this.props.images[this.state.nWrong]}
@@ -107,9 +108,57 @@ class Hangman extends Component {
 				<button onClick={this.restart} className='btn-secondary'>
 					Restart
 				</button>
-			</div>
+			</HangmanWrapper>
 		);
 	}
 }
+
+const HangmanWrapper = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(6 max-content);
+	grid-template-areas: "Heading Heading" "Image Image" "h2 h2" "Hangman-word Hangman-word" "Hangman-btns Hangman-btns" "reset-btn reset-btn";
+	max-width: 80%;
+	margin: auto;
+	grid-row-gap: 2rem;
+
+	@media (min-width: 992px) {
+		grid-template-areas: "Heading Heading" "Image Hangman-btns" "h2 h2" "Hangman-word Hangman-word" "reset-btn reset-btn";
+		max-width: 60%;
+		grid-column-gap: 3rem;
+	}
+	h1 {
+		grid-area: Heading;
+		margin: 0;
+	}
+
+	img {
+		grid-area: Image;
+		margin: auto;
+	}
+	h2 {
+		grid-area: h2;
+		margin: 0;
+	}
+
+	.Hangman-word {
+		letter-spacing: 1em;
+		margin: 0.4em -1em 0.2em 0;
+		font-size: 2rem;
+		grid-area: Hangman-word;
+	}
+	.Hangman-btns {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		justify-content: center;
+		grid-area: Hangman-btns;
+	}
+
+	.btn-secondary {
+		grid-area: reset-btn;
+		margin: auto;
+	}
+`;
 
 export default Hangman;
