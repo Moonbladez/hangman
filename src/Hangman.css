@@ -1,8 +1,11 @@
 .Hangman {
-  width: 400px;
-  color: black;
-  text-align: center;
-  zoom: 1.3;
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+}
+
+.Hangman-image {
+  align-self: center;
 }
 
 
@@ -16,6 +19,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  justify-content: center;
 }
 
 
