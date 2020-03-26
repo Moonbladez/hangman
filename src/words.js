@@ -1620,7 +1620,8 @@ var ENGLISH_WORDS = [
   "abruptly",
   "askew",
   "azure",
-  "buffoon"
+  "buffoon",
+  "razzmatazz"
 ];
 
 function randomWord() {
