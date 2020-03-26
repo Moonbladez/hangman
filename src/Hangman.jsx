@@ -83,6 +83,7 @@ class Hangman extends Component {
 		const gameOver = this.state.nWrong >= this.props.maxWrong;
 		const isWinner = this.guessedWord().join("") === this.state.answer;
 		const altText = `${this.state.nWrong} out of ${this.props.maxWrong} incorrect guesses made`;
+
 		let gameState = this.generateButtons();
 		if (isWinner) gameState = "You Win";
 		if (gameOver) gameState = "You loose";

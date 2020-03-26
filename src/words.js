@@ -1608,10 +1608,25 @@ var ENGLISH_WORDS = [
   "manual",
   "pistol",
   "naval",
+  "fluorescent",
+  "accommodate",
+  "psychiatrist",
+  "occasionally",
+  "necessary",
+  "questionnaire",
+  "mischievous",
+  "rhythm",
+  "minuscule",
+  "abruptly",
+  "askew",
+  "azure",
+  "buffoon"
 ];
 
 function randomWord() {
   return ENGLISH_WORDS[Math.floor(Math.random() * ENGLISH_WORDS.length)];
 }
 
-export { randomWord };
+export {
+  randomWord
+};
